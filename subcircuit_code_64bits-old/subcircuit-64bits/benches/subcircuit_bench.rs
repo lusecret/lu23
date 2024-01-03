@@ -184,8 +184,8 @@ fn set_duration() -> Criterion {
 criterion_group! {
 name = benches_snark;
 config = set_duration();
-targets = ari_circuit_prove_benchmark, ari_circuit_verify_benchmark, 
-//targets = binary_circuit_prove_benchmark, binary_circuit_verify_benchmark
+//targets = ari_circuit_prove_benchmark, ari_circuit_verify_benchmark, 
+targets = binary_circuit_prove_benchmark, binary_circuit_verify_benchmark
 }
 
 criterion_main!(benches_snark);
