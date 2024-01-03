@@ -15,6 +15,20 @@ As mentioned before, the benchmark is significantly better than that reported in
 
 ![16871704294520_ pic](https://github.com/lusecret/lu23/assets/8139291/166a618c-9707-4a7a-9535-597225b5753a)
 
+commits_verify_benchmark/binary_circuit_prove for 1048576 sequential multiplications 
+
+time:   [2.5878 s 2.6443 s 2.7350 s]
+
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) high mild
+  1 (10.00%) high severe
+
+Benchmarking commits_verify_benchmark/binary_circuit_verify for 1048576 sequential multiplications: Collecting 10 samples in                                                         
+
+commits_verify_benchmark/binary_circuit_verify for 1048576 sequential multiplications     
+
+time:   [16.967 ms 17.030 ms 17.096 ms]
+
 ## Benchmark - Communication Cost
 
 The "actual" benchmark is computed by adding up all elements (group and field) used to create the proof transcript, this is also the theoretical (achievable) communication cost. The "encoded" proof size includes additional overheads to allow encoded streams to quickly convert back to a rust struct instance (We used bincode crate to serialize/deserialize the proof transcript). 
